@@ -76,6 +76,7 @@ const ExpenseForm = (props) => {
     // 입력하고 섭밋으로 데이터를 전송하면 다시 빈칸으로 오버라이딩 해준다.
   };
 
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -93,6 +94,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="submit" onClick={props.closeFormHandler}>Cancel</button>
         <button type="submit" >Add Expense</button>
       </div>
     </form>

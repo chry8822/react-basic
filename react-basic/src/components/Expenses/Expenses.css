@@ -5,3 +5,8 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.expense__empty-content {
+  color: #fff;
+  margin-left: 20px;
+}
