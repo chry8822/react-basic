@@ -6,7 +6,7 @@ import Card from '../UI/Card'
 import './Expenses.css'
 
 const Expenses = (props) => {
-  const [yearFilter, setYearFilter] = useState('2022');
+  const [yearFilter, setYearFilter] = useState('2021');
 
   const filterHandler = (selectYear) => {
     setYearFilter(selectYear);
@@ -19,8 +19,6 @@ const Expenses = (props) => {
   // getFullYear 은 년도를 number로 반환하기 때문에 toString으로 문자로 변환후 비교한다.(yearFilter 는 문자열이기 때문에)
 
   //-------------------------------------------------------------------------------------------------------------------
-
-
 
   return (
     <div>

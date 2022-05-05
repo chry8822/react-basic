@@ -7,6 +7,7 @@ const Chart = (props) => {
   const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
   const totlaMaximum = Math.max(...dataPointValues)
 
+
   return (
     <div className="chart">
       {props.dataPoints.map(dataPoint =>
@@ -15,7 +16,7 @@ const Chart = (props) => {
           value={dataPoint.value}
           maxValue={totlaMaximum}
           label={dataPoint.label}
-          total={props.total}
+          totalAmount={props.totalAmount}
         />)}
       {/* 현재 프롭스로 받안온 dataPoints 만큼 ChartBar컴포넌트를 생서 */}
     </div>

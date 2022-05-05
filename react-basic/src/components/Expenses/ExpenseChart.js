@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "../../Chart/Chart";
 
 import './ExpenseChart.css'
@@ -26,18 +26,25 @@ const ExpenseChart = (props) => {
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 
-  setTotalAmount(
-    props.expenses.map(expense => {
-      const copied = JSON.parse(JSON.stringify(expense));
-      copied.amount += totalAmount;
-      return copied
-    })
-  )
+  // const copied = props.expenses.map((expense) => {
+  //   return expense.amount += totalAmount;
+  // })
+
+  // useEffect(() => {
+  //   setTotalAmount(() => {
+  //     props.expenses.map(expense => {
+  //       const copied = JSON.parse(JSON.stringify(expense));
+  //       copied.amount = copied.amount + totalAmount;
+  //       return copied
+  //     })
+  //   })
+  // }, [])
+
 
 
   return (
     <div>
-      <Chart dataPoints={chartDataPoints} total={totalAmount} />
+      <Chart dataPoints={chartDataPoints} totalAmount={totalAmount} />
     </div>
   )
 }
