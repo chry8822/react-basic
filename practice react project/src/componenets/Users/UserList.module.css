@@ -13,4 +13,19 @@
   border: 1px solid #ccc;
   margin: 0.5rem 0;
   padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.users button {
+  float: right;
+  border-style: none;
+  background-color: transparent;
+  transition: 0.1s;
+  border-radius: 5px;
+}
+
+.users button:active {
+  color: #fff;
+  background-color: red;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
